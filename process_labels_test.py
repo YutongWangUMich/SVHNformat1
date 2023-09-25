@@ -214,3 +214,4 @@ df = df[cols]
 
 df.to_csv("labels/meta_data_test.csv")
 
+df[['name', 'unique_label']].to_csv("labels/labels_test.csv",index=False)

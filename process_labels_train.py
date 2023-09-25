@@ -213,4 +213,4 @@ cols = ['name'] + [col for col in df if col != 'name']
 df = df[cols]
 
 df.to_csv("labels/meta_data_train.csv")
-
+df[['name', 'unique_label']].to_csv("labels/labels_train.csv",index=False)
