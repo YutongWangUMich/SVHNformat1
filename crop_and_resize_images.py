@@ -46,7 +46,7 @@ def process_and_resize_images(meta_data, images_path, save_path):
             left, top, width, height = row['crop_left'], row['crop_top'], row['crop_width'], row['crop_height']
             img_cropped = img.crop((left, top, left + width, top + height))
             img_final = resize_image(img_cropped)
-            img_save_path = os.path.join(save_path, f"cropped_{row['name']}")
+            img_save_path = os.path.join(save_path, f"{row['name']}")
             img_final.save(img_save_path)
 
 # Calling the function to process and resize the images
