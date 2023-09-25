@@ -8,10 +8,21 @@ source unpack.sh
 
 ## To run things step by step
 install `mat73` for loading the label meta data
-```pip install mat73```
+```
+pip install mat73
+```
 
 to download the data, run
-```python download_data.py```
+```
+python download_data.py
+```
+
+calculate image sizes
+```
+python calculate_image_sizes.py train
+python calculate_image_sizes.py test
+```
+
 
 generate the label meta data by
 ```
@@ -20,10 +31,23 @@ python process_labels_train.py
 python process_labels_test.py
 ```
 
+```
+mkdir labels
+python process_labels.py train
+python process_labels.py test
+```
+
 crop and resize images so that they are 32-by-32
 ```
 mkdir data_proc/train
 mkdir data_proc/test
 python crop_and_resize_images_train.py
 python crop_and_resize_images_test.py
+```
+
+```
+mkdir data_proc/train
+mkdir data_proc/test
+python crop_and_resize_images.py train
+python crop_and_resize_images.py test
 ```
